@@ -33,12 +33,11 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEMPLATE</TYPE>
        <NAME>GV_UPLOAD_CHOICE</NAME>
-       <TEXT>______________________________</TEXT>
-       <DROPDOWN>K</DROPDOWN>
-       <LINE>008</LINE>
-       <COLUMN>028</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>032</VISLENGTH>
+       <TEXT>________________________________________________________________________________________________________________________________</TEXT>
+       <LINE>004</LINE>
+       <COLUMN>003</COLUMN>
+       <LENGTH>128</LENGTH>
+       <VISLENGTH>128</VISLENGTH>
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <INPUT_FLD>X</INPUT_FLD>
@@ -69,6 +68,13 @@
       </RPY_DYFLOW>
       <RPY_DYFLOW>
        <LINE> MODULE USER_COMMAND_0100.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW/>
+      <RPY_DYFLOW>
+       <LINE>PROCESS ON VALUE-REQUEST.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>FIELD gv_upload_choice MODULE d9001_value_filepath.</LINE>
       </RPY_DYFLOW>
      </FLOW_LOGIC>
     </item>
@@ -109,8 +115,32 @@
       <ICON_ID>@0W@</ICON_ID>
       <FUN_TEXT>Cancel</FUN_TEXT>
      </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>GETFILE</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_SYSTEM_PASTE</TEXT_NAME>
+      <ICON_ID>@2V@</ICON_ID>
+      <FUN_TEXT>GETFILE</FUN_TEXT>
+      <ICON_TEXT>GETFILE</ICON_TEXT>
+      <INFO_TEXT>GETFILE</INFO_TEXT>
+     </RSMPE_FUNT>
     </FUN>
+    <BUT>
+     <RSMPE_BUT>
+      <PFK_CODE>000001</PFK_CODE>
+      <CODE>0001</CODE>
+      <NO>01</NO>
+      <PFNO>02</PFNO>
+     </RSMPE_BUT>
+    </BUT>
     <PFK>
+     <RSMPE_PFK>
+      <CODE>000001</CODE>
+      <PFNO>02</PFNO>
+      <FUNCODE>GETFILE</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
      <RSMPE_PFK>
       <CODE>000001</CODE>
       <PFNO>03</PFNO>
@@ -134,6 +164,10 @@
      <RSMPE_STAF>
       <STATUS>0100</STATUS>
       <FUNCTION>BACK</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>0100</STATUS>
+      <FUNCTION>GETFILE</FUNCTION>
      </RSMPE_STAF>
     </SET>
     <DOC>
